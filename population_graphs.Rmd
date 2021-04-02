@@ -1,0 +1,36 @@
+---
+title: "Population Graphs"
+author: "Emily Halford"
+date: "4/2/2021"
+output: html_document
+---
+
+# Load Tidyverse
+
+```{r packages}
+
+library(tidyverse)
+
+```
+
+# Load Data
+
+```{r datafile}
+
+populations = readxl::read_xlsx("./data/population_data.xlsx") %>% 
+  mutate(
+    year = lubridate::ymd(year, truncated = 2L)
+  )
+
+```
+
+# Graphs
+
+```{r graphs}
+
+populations %>% 
+  filter(city %in% "nyc") %>% 
+  ggplot() + geom_line(aes(x = year, y = population))
+
+```
+
