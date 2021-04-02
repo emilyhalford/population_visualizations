@@ -28,9 +28,135 @@ populations = readxl::read_xlsx("./data/population_data.xlsx") %>%
 
 ```{r graphs}
 
+## New York City
 populations %>% 
   filter(city %in% "nyc") %>% 
-  ggplot() + geom_line(aes(x = year, y = population))
+  ggplot(aes(x = year, y = population)) + geom_line(color = "steelblue3", size = 1.25) +
+  geom_area(fill = "steelblue3", alpha = 0.2) +
+  theme_minimal() +
+  scale_y_continuous(breaks = seq(0e6, 8e6, 2e6), labels = c("0", "2", "4", "6", "8")) +
+  labs(
+    x = "",
+    y = "Population (in Millions)",
+    title = "New York City Population, 1790-2010"
+  )
+
+## Boston
+populations %>% 
+  filter(city %in% "boston") %>% 
+  ggplot(aes(x = year, y = population)) + geom_line(color = "steelblue3", size = 1.25) +
+  geom_area(fill = "steelblue3", alpha = 0.2) +
+  theme_minimal() +
+  scale_y_continuous(breaks = seq(0e5, 8e5, 2e5), labels = c("0", "200", "400", "600", "800")) +
+  labs(
+    x = "",
+    y = "Population (in Thousands)",
+    title = "Boston Population, 1640-2010"
+  )
+
+## Chicago
+populations %>% 
+  filter(city %in% "chicago") %>% 
+  ggplot(aes(x = year, y = population)) + geom_line(color = "steelblue3", size = 1.25) +
+  geom_area(fill = "steelblue3", alpha = 0.2) +
+  theme_minimal() +
+  scale_y_continuous(breaks = seq(0e6, 3e6, 1e6), labels = c("0", "1", "2", "3")) +
+  labs(
+    x = "",
+    y = "Population (in Millions)",
+    title = "Chicago Population, 1840-2010"
+  )
+
+## Houston
+populations %>% 
+  filter(city %in% "houston") %>% 
+  ggplot(aes(x = year, y = population)) + geom_line(color = "steelblue3", size = 1.25) +
+  geom_area(fill = "steelblue3", alpha = 0.2) +
+  theme_minimal() +
+  scale_y_continuous(breaks = seq(0e6, 2e6, 5e5), labels = c("0", "0.5", "1", "1.5", "2")) +
+  labs(
+    x = "",
+    y = "Population (in Millions)",
+    title = "Houston Population, 1850-2010"
+  )
+
+## Philadelphia
+populations %>% 
+  filter(city %in% "philadelphia") %>% 
+  ggplot(aes(x = year, y = population)) + geom_line(color = "steelblue3", size = 1.25) +
+  geom_area(fill = "steelblue3", alpha = 0.2) +
+  theme_minimal() +
+  scale_y_continuous(breaks = seq(0e6, 2e6, 5e5), labels = c("0", "0.5", "1", "1.5", "2")) +
+  labs(
+    x = "",
+    y = "Population (in Millions)",
+    title = "Philadelphia Population, 1683-2010"
+  )
+
+## Los Angeles
+populations %>% 
+  filter(city %in% "la") %>% 
+  ggplot(aes(x = year, y = population)) + geom_line(color = "steelblue3", size = 1.25) +
+  geom_area(fill = "steelblue3", alpha = 0.2) +
+  theme_minimal() +
+  scale_y_continuous(breaks = seq(0e6, 3e6, 1e6), labels = c("0", "1", "2", "3")) +
+  labs(
+    x = "",
+    y = "Population (in Millions)",
+    title = "Los Angeles Population, 1850-2010"
+  )
+
+## Pheonix
+populations %>% 
+  filter(city %in% "pheonix") %>% 
+  ggplot(aes(x = year, y = population)) + geom_line(color = "steelblue3", size = 1.25) +
+  geom_area(fill = "steelblue3", alpha = 0.2) +
+  theme_minimal() +
+  scale_y_continuous(breaks = seq(0e6, 1.5e6, 5e5), labels = c("0", "0.5", "1", "1.5")) +
+  labs(
+    x = "",
+    y = "Population (in Millions)",
+    title = "Pheonix Population, 1870-2010"
+  )
+
+## Newark
+populations %>% 
+  filter(city %in% "newark") %>% 
+  ggplot(aes(x = year, y = population)) + geom_line(color = "steelblue3", size = 1.25) +
+  geom_area(fill = "steelblue3", alpha = 0.2) +
+  theme_minimal() +
+  scale_y_continuous(breaks = seq(0e5, 4e5, 1e5), labels = c("0", "100", "200", "300", "400")) +
+  labs(
+    x = "",
+    y = "Population (in Thousands)",
+    title = "Newark Population, 1810-2010"
+  )
+
+## San Francisco
+populations %>% 
+  filter(city %in% "san francisco") %>% 
+  ggplot(aes(x = year, y = population)) + geom_line(color = "steelblue3", size = 1.25) +
+  geom_area(fill = "steelblue3", alpha = 0.2) +
+  theme_minimal() +
+  scale_y_continuous(breaks = seq(0e5, 8e5, 2e5), labels = c("0", "200", "400", "600", "800")) +
+  labs(
+    x = "",
+    y = "Population (in Thousands)",
+    title = "San Francisco Population, 1848-2010"
+  )
+
+## Seattle
+populations %>% 
+  filter(city %in% "seattle") %>% 
+  ggplot(aes(x = year, y = population)) + geom_line(color = "steelblue3", size = 1.25) +
+  geom_area(fill = "steelblue3", alpha = 0.2) +
+  theme_minimal() +
+  scale_y_continuous(breaks = seq(0e5, 6e5, 2e5), labels = c("0", "200", "400", "600")) +
+  labs(
+    x = "",
+    y = "Population (in Thousands)",
+    title = "Seattle Population, 1860-2010"
+  )
 
 ```
 
