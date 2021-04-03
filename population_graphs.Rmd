@@ -106,9 +106,9 @@ populations %>%
     title = "Los Angeles Population, 1850-2010"
   )
 
-## Pheonix
+## Phoenix
 populations %>% 
-  filter(city %in% "pheonix") %>% 
+  filter(city %in% "phoenix") %>% 
   ggplot(aes(x = year, y = population)) + geom_line(color = "steelblue3", size = 1.25) +
   geom_area(fill = "steelblue3", alpha = 0.2) +
   theme_minimal() +
@@ -116,7 +116,7 @@ populations %>%
   labs(
     x = "",
     y = "Population (in Millions)",
-    title = "Pheonix Population, 1870-2010"
+    title = "Phoenix Population, 1870-2010"
   )
 
 ## Newark
