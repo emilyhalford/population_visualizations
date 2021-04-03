@@ -1,5 +1,5 @@
 # population_visualizations
-Code and data for my 04.03.21 Towards Data Science post titled "Data Storytelling with Population Data."
+Code and data for my 04.03.21 Towards Data Science post titled "Data Storytelling with Population Visualizations."
 
 Article link: https://emilyahalford.medium.com/data-storytelling-with-population-visualizations-5734b72329d6
 
